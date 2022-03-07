@@ -26,8 +26,10 @@ python3默认是unicode，可识别中文字符 。utf-8可以看做是unicode�
 概述：Unicode 是人类可识别的字符格式；ASCII 、UTF-8 、GBK 等都是机器可识别的字节码格式。  
 我们写在文件中的 py3 代码，是由字符组成的，它们的格式，就是 Unicode，而字符是以字节为存储单位保存在文件中，文件保存在内存 / 物理磁盘中  
 
-# 标识符  
-标识符由字符，下划线，数字组成，但是第一个字符不能是数字  
+# 标识符
+```text
+标识符由字符，下划线，数字组成，但是第一个字符不能是数字
+```
 
 # 运算符
 ```text
@@ -49,6 +51,7 @@ python3默认是unicode，可识别中文字符 。utf-8可以看做是unicode�
 <<左移运算符
 >>右移运算符
 ```
+
 # 逻辑运算符  
 ```text
 not  布尔非
@@ -76,24 +79,25 @@ is表示内存地址
 
 # 数学运算类
 ```python
-    abs(x)                              # 求绝对值，参数可以是整型，也可以是复数，若参数是复数，则返回复数的模
-    complex([real[, imag]])             # 创建一个复数
-    divmod(a, b)                        # 分别取商和余数，注意：整型、浮点型都可以
-    float([x])                          # 将一个字符串或数转换为浮点数。如果无参数将返回0.0
-    int([x[, base]])                    # 将一个字符串或浮点数转换为int类型，base表示进制
-    long([x[, base]])                   # 将一个字符串或浮点数转换为long类型
-    pow(x, y)                           # 返回x的y次幂
-    range([start], stop[, step])        # 产生一个序列，默认从0开始
-    round(x[, n])                       # 四舍五入
-    sum(iterable[, start])              # 对集合求和
-    oct(x)                              # 将一个数字转化为8进制字符串
-    hex(x)                              # 将一个数字转换为16进制字符串
-    chr(i)                              # 返回给定int类型对应的ASCII字符
-    unichr(i)                           # 返回给定int类型的unicode
-    ord(c)                              # 返回ASCII字符对应的整数
-    bin(x)                              # 将整数x转换为二进制字符串
-    bool([x])                           # 将x转换为Boolean类型
+abs(x)                              # 求绝对值，参数可以是整型，也可以是复数，若参数是复数，则返回复数的模
+complex([real[, imag]])             # 创建一个复数
+divmod(a, b)                        # 分别取商和余数，注意：整型、浮点型都可以
+float([x])                          # 将一个字符串或数转换为浮点数。如果无参数将返回0.0
+int([x[, base]])                    # 将一个字符串或浮点数转换为int类型，base表示进制
+long([x[, base]])                   # 将一个字符串或浮点数转换为long类型
+pow(x, y)                           # 返回x的y次幂
+range([start], stop[, step])        # 产生一个序列，默认从0开始
+round(x[, n])                       # 四舍五入
+sum(iterable[, start])              # 对集合求和
+oct(x)                              # 将一个数字转化为8进制字符串
+hex(x)                              # 将一个数字转换为16进制字符串
+chr(i)                              # 返回给定int类型对应的ASCII字符
+unichr(i)                           # 返回给定int类型的unicode
+ord(c)                              # 返回ASCII字符对应的整数
+bin(x)                              # 将整数x转换为二进制字符串
+bool([x])                           # 将x转换为Boolean类型
 ```
+
 # 变量的本质
 ```text
 变量的本质是指向存储实体的指针
@@ -110,7 +114,7 @@ is表示内存地址
 分代回收：在经历多次扫描的情况下，都没有被回收的变量，GC机制就会认为，该变量为常用变量
 ```
 
-# map
+# map函数
 ```python
 num = 123
 print(sum(map(int,str(num)))) #输出是6
@@ -133,6 +137,7 @@ list3 = list1.deepcopy()
 单例模式
 工厂模式
 ```
+
 # 流程控制
 ```text
 短路运算：偷懒原则，偷懒到那个位置，就把当前位置的值返回
@@ -1110,7 +1115,7 @@ if __name__ == '__main__':
 异步：调用方法后不会等到执行完成，而是直接执行后续代码。结果通过状态通知猪线程，或者通过回调处理这次异步方法执行的结果
 ```
 
-阻塞&非阻塞
+# 阻塞&非阻塞
 
 粘包：TCP粘包是指发送方发送的若干包数据到接收方接收时粘成一包，从接收缓冲区看，后一包数据的头紧接着前一包数据的尾。出现粘包现象的原因是多方面的，它可能是由发送方造成的，也可能是接收方造成的
 粘包的解决方案：
@@ -1119,7 +1124,8 @@ if __name__ == '__main__':
 最终接收到的数据只要达到这个值就停止。
 
 
-装饰器
+# 装饰器
+```python
 装饰器使一个函数或方法包装在另一个函数里头，可以在被包装的函数添加一些额外的功能，比如日志，还可以对参数、返回结果进行修改。装饰器有点类似Java中的AOP。下面这个例子是打印被装饰的函数里面的参数的装饰器，
 def print_args(function):
      def wrapper(*args, **kwargs):
@@ -1140,10 +1146,12 @@ write = print_args(write)
 write('foo')
 arguments: ('foo',) {}
 foo
+```
 
-python正则表达式
+# Python正则表达式
 https://note.youdao.com/s/L6wDn9V
-数据库
+
+# 数据库
 数据库增删改查
 数据库索引
 Mysql 事务
@@ -1156,34 +1164,39 @@ MySQL 事务主要用于处理操作量大，复杂度高的数据。
 html
 css
 js
-python包
+# Python包
 system函数可以将字符串转化成命令在服务器上运行；其原理是每一条system函数执行时，其会创建一个子进程在系统上执行命令行，子进程的执行结果无法影响主进程；
 上述原理会导致当需要执行多条命令行的时候可能得不到预期的结果；
 os.system()
 os.listdir()和os.walk()的区别
 listdir不会执行子目录，walk会执行文件夹下所有文件。包括子目录
 
-hashlib模块
+# hashlib模块
+```python
 import hashlib
 m = hashlib.md5()
 return m.hexdigest())
+```
 
-猴子补丁
+# 猴子补丁
 属性在运动时的动态替换
-get 和 post的区别
+
+# get 和 post的区别  
+```text
 GET请求是通过URL直接请求数据，数据信息可以在URL中直接看到，比如浏览器访问；而POST请求是放在请求头中的，我们是无法直接看到的；
 GET提交有数据大小的限制，一般是不超过1024个字节，而这种说法也不完全准确，HTTP协议并没有设定URL字节长度的上限，而是浏览器做了些处理，所以长度依据浏览器的不同有所不同；
 POST请求在HTTP协议中也没有做说明，一般来说是没有设置限制的，但是实际上浏览器也有默认值。总体来说，少量的数据使用GET，大量的数据使用POST。
 GET请求因为数据参数是暴露在URL中的，所以安全性比较低，比如密码是不能暴露的，就不能使用GET请求；
 POST请求中，请求参数信息是放在请求头的，所以安全性较高，可以使用。在实际中，涉及到登录操作的时候，尽量使用HTTPS请求，安全性更好
+```
 
-session 和cookie的区别
+# session 和cookie的区别
+```text
 session 在服务器端，cookie 在客户端（浏览器）
 session 的运行依赖 session id，而 session id 是存在 cookie 中的，也就是说，如果浏览器禁用了 cookie ，同时 session 也会失效。
 存储Session时，键与Cookie中的sessionid相同，值是开发人员设置的键值对信息，进行了base64编码，过期时间由开发人员设置
 cookie安全性比session差
-python的5种设计模式
-单例模式，工厂模式，构建者模式，代理模式，观察者模式
+```
 
 os模块
 import os
@@ -1197,7 +1210,7 @@ import csv
 f = csv.reader(open('1111.csv','r'))
 for i in f:
     print(i)
-进程和线程
+# 进程和线程
 https://www.ruanyifeng.com/blog/2013/04/processes_and_threads.html
 
 
