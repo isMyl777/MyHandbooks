@@ -60,6 +60,24 @@ is表示内存地址
 %s 字符型
 %f float型
 %c 字符
+"""数学运算类"""
+    abs(x)                              # 求绝对值，参数可以是整型，也可以是复数，若参数是复数，则返回复数的模
+    complex([real[, imag]])             # 创建一个复数
+    divmod(a, b)                        # 分别取商和余数，注意：整型、浮点型都可以
+    float([x])                          # 将一个字符串或数转换为浮点数。如果无参数将返回0.0
+    int([x[, base]])                    # 将一个字符串或浮点数转换为int类型，base表示进制
+    long([x[, base]])                   # 将一个字符串或浮点数转换为long类型
+    pow(x, y)                           # 返回x的y次幂
+    range([start], stop[, step])        # 产生一个序列，默认从0开始
+    round(x[, n])                       # 四舍五入
+    sum(iterable[, start])              # 对集合求和
+    oct(x)                              # 将一个数字转化为8进制字符串
+    hex(x)                              # 将一个数字转换为16进制字符串
+    chr(i)                              # 返回给定int类型对应的ASCII字符
+    unichr(i)                           # 返回给定int类型的unicode
+    ord(c)                              # 返回ASCII字符对应的整数
+    bin(x)                              # 将整数x转换为二进制字符串
+    bool([x])                           # 将x转换为Boolean类型
 
 变量的本质
 变量的本质是指向存储实体的指针
