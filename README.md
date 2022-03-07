@@ -362,7 +362,8 @@ c.update(b)
 3、dict(list(a.items()) + list(b.items()))
 ```
 
-python集合
+# python集合
+```python
 # 集合
 s1 = {10,20,30,40,50}
 print(type(s1))
@@ -398,13 +399,13 @@ print(s1)  #集合是无序的，不支持下标
 # print(status)
 # status1 = 90 not in s1
 # print(status1)
-公共运算符
+```
+
+# 公共运算符
 
 
-
-
-推导式
 # 推导式
+```python
 list1 = [x for x in range(11)]
 print(type(list1))
 print(list1)
@@ -438,12 +439,15 @@ print(dict1)
 # ll = {i**2 for i in list1}
 # print(ll)
 # print(type(ll))
-迭代器和生成器
-迭代：就是循环遍历的过程。迭代器只能往前，由iter() 和next() 组成
-生成器：带有yield的函数为生成器
-yield
+```
 
-函数
+# 迭代器和生成器
+迭代：就是循环遍历的过程。迭代器只能往前，由iter() 和next() 组成  
+生成器：带有yield的函数为生成器  
+yield  
+
+# 函数
+```text
 函数的作用
 封装代码，高效的代码重用
 函数的使用步骤
@@ -605,11 +609,11 @@ print(student)
 # res =filter(func, list1)
 # print(list(res))
 # print(res) #<filter object at 0x00000202F77A6FD0>
-文件操作
-文件操作的作用就是把一些内容数据存储起来，可以让程序下一次执行的时候直接使用，而不必重新制作一份
+```
 
-
-
+# 文件操作  
+文件操作的作用就是把一些内容数据存储起来，可以让程序下一次执行的时候直接使用，而不必重新制作一份  
+```python
 file = open('C:\\Users\\EDZ\\Desktop\\newtest.txt','r')
 #read 不写参数表示读取所有
 #文件换行\n,会有字节占位
@@ -681,7 +685,10 @@ for file in dir:
 由于反斜杠在python中被视为转义标记，为保证在windows下正确，应以原始字符串的方式指定路径，即在开头的单引号前加上r,如下
 
 new_dir=r'D:\workspace\drtm\release_bin\tasks\file_luanxian#steel_luanxian_5_detector\img'
-面向对象
+```
+
+# 面向对象
+```python
 类和对象
 用类去创建一个对象，或者用类实例化对象 
 对象是“容器”，对象存放数据与功能
@@ -1000,8 +1007,9 @@ def main():
 
 if __name__ == '__main__':
     main()
+```
 
-python网络编程
+# python网络编程
 IP地址
 udpClientSocket = socket(AF_INET,SOCK_DGRAM)
 udpServerSocket = socket(AF_INET,SOCK_DGRAM)
@@ -1014,7 +1022,8 @@ socket.sendto(data,address)
 socket.recvfrom()
 UDP
 TCP
-python并发编程
+
+# python并发编程  
 参考文档：https://www.cnblogs.com/zhangyafei/p/9606765.html
 协程：
 1、利用greenlet
@@ -1093,14 +1102,15 @@ if __name__ == '__main__':
 
     print('ending.......') #主线程
     print(time.ctime())
-GIL(全局解释器锁）：
+# GIL(全局解释器锁) 
+```text 
 无论你启多少个线程，你有多少个cpu, Python在执行的时候会淡定的在同一时刻只允许一个线程运行。
 同步& 异步
 同步：当调用方法执行完成之后并返回结果，才能执行后续代码
 异步：调用方法后不会等到执行完成，而是直接执行后续代码。结果通过状态通知猪线程，或者通过回调处理这次异步方法执行的结果
+```
 
 阻塞&非阻塞
-
 
 粘包：TCP粘包是指发送方发送的若干包数据到接收方接收时粘成一包，从接收缓冲区看，后一包数据的头紧接着前一包数据的尾。出现粘包现象的原因是多方面的，它可能是由发送方造成的，也可能是接收方造成的
 粘包的解决方案：
@@ -1141,7 +1151,7 @@ MySQL 事务主要用于处理操作量大，复杂度高的数据。
 比如说，在人员管理系统中，你删除一个人员，你既需要删除人员的基本资料，也要删除和该人员相关的信息，如信箱，文章等等，这样，这些数据库操作语句就构成一个事务！
 特性：原子性，一致性，独立性，持久性
 
-前端
+# 前端
 浏览器发请求 --> HTTP协议 --> 服务端接收请求 --> 服务端返回响应 --> 服务端把HTML文件内容发给浏览器 --> 浏览器渲染页面
 html
 css
@@ -1192,7 +1202,7 @@ https://www.ruanyifeng.com/blog/2013/04/processes_and_threads.html
 
 
 
-进程与线程的选择取决以下几点：
+# 进程与线程的选择取决以下几点：
 1、需要频繁创建销毁的优先使用线程；因为对进程来说创建和销毁一个进程代价是很大的。
 2、线程的切换速度快，所以在需要大量计算，切换频繁时用线程，还有耗时的操作使用线程可提高应用程序的响应
 3、因为对CPU系统的效率使用上线程更占优，所以可能要发展到多机分布的用进程，多核分布用线程；
