@@ -6,6 +6,7 @@ Number数字  String字符串  list列表  tuple元组  set集合  dictionary字
 可变  list set dict  
 不可变  数字 元组 字符串  
 number又包含 int  float  long complex  
+
 # 判断python变量的类型
 type()  # 直接输出类型  
 isinstance(1,int) # 输出是true or false，判断1整型  
@@ -24,12 +25,20 @@ python3默认是unicode，可识别中文字符 。utf-8可以看做是unicode�
 解码：编码的反向过程叫解码  
 概述：Unicode 是人类可识别的字符格式；ASCII 、UTF-8 、GBK 等都是机器可识别的字节码格式。  
 我们写在文件中的 py3 代码，是由字符组成的，它们的格式，就是 Unicode，而字符是以字节为存储单位保存在文件中，文件保存在内存 / 物理磁盘中  
+
 # 标识符  
 标识符由字符，下划线，数字组成，但是第一个字符不能是数字  
+
 # 运算符
-+ - × / (加减乘除) %(取余) // (向下取整)  ×× (乘方运算符）  
+```text
++ - × / (加减乘除) %(取余) // (向下取整)  ×× (乘方运算符） 
+```
+
 # 比较运算符
+```text
 ==  !=  > <  >= <=  <>(python3已废弃)  
+```
+
 # 位运算符
 按位运算符是把数字看作二进制来计算  
 ```text
@@ -119,10 +128,13 @@ list2 = list1.copy()
 list3 = list1.deepcopy()
 ```
 
-设计模式
+# 设计模式
+```text
 单例模式
 工厂模式
-流程控制
+```
+# 流程控制
+```text
 短路运算：偷懒原则，偷懒到那个位置，就把当前位置的值返回
 if循环
 if 条件判断：
@@ -150,7 +162,10 @@ while a <10:
         continue
     print(a)
 死循环while 1 比 while true效率要高
-简单函数
+```
+
+# 简单函数
+```python
 def changeme(myList):  //定义函数
     myList.append(4)
     print(myList)
@@ -168,7 +183,10 @@ sum2 = lambda num1 : num1 + num2
 print(sum1(1))
 print(sum2(1))
 #num2是一个自由变量，在运行时绑定值，而不是定义时就绑定，这跟函数的默认值参数定义是不同的
-局部变量和全局变量
+```
+
+# 局部变量和全局变量
+```text
 全局变量和局部变量的区别在于作用域，全局变量在全局范围内都可以使用，局部变量只能在函数内部使用。
 在函数内部，如果局部变量和全局变量变量名一样，则优先调用局部变量
 在函数内部改变全局变量，需要在前面机上global关键字，函数执行后，全局变量也会发生改变。
@@ -177,7 +195,10 @@ global与nonlocal的区别
 使用范围不同，global关键字可以用在任何地方，而nonlocal关键字只能用于嵌套函数中，并且外层函数中定义路相应的局部变量，否则会报错
 
 nonlocal声明的变量不是局部变量,也不是全局变量,而是外部嵌套函数内的变量
-python字符串操作
+```
+
+# python字符串操作
+```python
 查找
 str1 = 'hello world in the world'
 # find()
@@ -239,7 +260,10 @@ print(str1.isalpha())  #字母
 print(str1.isdigit())  #数字
 print(str1.isalnum())  #字母数字的组合
 print(str1.isspace())  #空白
-python列表
+```
+
+# python列表
+```python
 list1 = []  # 定义一个空列表
 list1 = [1,2,3,4]
 list1.append(5)  #增加列表
@@ -268,10 +292,14 @@ for i in range(len(list1)):
     print(i,list1[i])
 for i,value in enumerate(list1):
     print(i,value)
-队列和堆栈
-队列：先进先出
-堆栈：先进后出
-python元组
+```
+
+# 队列和堆栈
+队列：先进先出  
+堆栈：先进后出  
+
+# python元组
+```text
 #定义元祖
 t1 = ()
 #元组中只包含一个元素时，需要在元素后面添加逗号来消除歧义
@@ -284,7 +312,10 @@ Python元组包含了以下内置函数
 3、max(tuple1)：返回元组中元素最大值
 4、min(tuple1)：返回元组中元素最小值
 5、tuple(seq)：将列表转换为元组
-python字典
+```
+
+# python字典
+```python
 # 字典
 dict1 = {'name':'xiaoma','age':'18'}
 print(dict1)
@@ -329,6 +360,7 @@ for key,value in dict1.items():
 c.update(a)
 c.update(b)
 3、dict(list(a.items()) + list(b.items()))
+```
 
 python集合
 # 集合
