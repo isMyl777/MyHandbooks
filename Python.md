@@ -202,6 +202,19 @@ global与nonlocal的区别
 nonlocal声明的变量不是局部变量,也不是全局变量,而是外部嵌套函数内的变量
 ```
 
+# 闭包  
+当我们在函数内定义一个函数时，如果这个内部函数使用了外部函数的临时变量，且外部函数的返回值是内部函数的引用时，那么返回的这个内部函数引用就是一个闭包  
+```python
+def simple_avg():
+    scores = []
+    def inner_avg(val):
+        scores.append(val)
+        return sum(scores)
+     return inner_avg
+avg = simple_avg()
+print(avg(10))
+```
+
 # python字符串操作
 ```python
 查找
