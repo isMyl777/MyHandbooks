@@ -1,5 +1,5 @@
 # Python学习笔记  
-# python语言特性  
+# Python语言特性  
 强类型动态语言  
 基础数据类型  
 Number数字  String字符串  list列表  tuple元组  set集合  dictionary字典  
@@ -7,7 +7,7 @@ Number数字  String字符串  list列表  tuple元组  set集合  dictionary字
 不可变  数字 元组 字符串  
 number又包含 int  float  long complex  
 
-# 判断python变量的类型
+# 判断Python变量的类型
 type()  # 直接输出类型  
 isinstance(1,int) # 输出是true or false，判断1整型  
 python 变量和对象  
@@ -214,7 +214,7 @@ avg = simple_avg()
 print(avg(10))
 ```
 
-# python字符串操作
+# Python字符串操作
 ```python
 查找
 str1 = 'hello world in the world'
@@ -279,7 +279,7 @@ print(str1.isalnum())  #字母数字的组合
 print(str1.isspace())  #空白
 ```
 
-# python列表
+# Python列表
 ```python
 list1 = []  # 定义一个空列表
 list1 = [1,2,3,4]
@@ -315,7 +315,7 @@ for i,value in enumerate(list1):
 队列：先进先出  
 堆栈：先进后出  
 
-# python元组
+# Python元组
 ```text
 #定义元祖
 t1 = ()
@@ -331,7 +331,7 @@ Python元组包含了以下内置函数
 5、tuple(seq)：将列表转换为元组
 ```
 
-# python字典
+# Python字典
 ```python
 # 字典
 dict1 = {'name':'xiaoma','age':'18'}
@@ -379,7 +379,7 @@ c.update(b)
 3、dict(list(a.items()) + list(b.items()))
 ```
 
-# python集合
+# Python集合
 ```python
 # 集合
 s1 = {10,20,30,40,50}
