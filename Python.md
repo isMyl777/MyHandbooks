@@ -187,7 +187,7 @@ num2 = 10000
 sum2 = lambda num1 : num1 + num2
 print(sum1(1))
 print(sum2(1))
-#num2是一个自由变量，在运行时绑定值，而不是定义时就绑定，这跟函数的默认值参数定义是不同的
+num2是一个自由变量，在运行时绑定值，而不是定义时就绑定，这跟函数的默认值参数定义是不同的
 ```
 
 # 局部变量和全局变量
@@ -198,7 +198,6 @@ print(sum2(1))
 global与nonlocal的区别
 功能不同，nonlocal关键字修饰变量后标识该变量是上一级函数中的局部变量，如果上一级函数中不存在该局部变量，nonlocal 位置会发送错误
 使用范围不同，global关键字可以用在任何地方，而nonlocal关键字只能用于嵌套函数中，并且外层函数中定义路相应的局部变量，否则会报错
-
 nonlocal声明的变量不是局部变量,也不是全局变量,而是外部嵌套函数内的变量
 ```
 
@@ -459,9 +458,18 @@ print(dict1)
 # print(type(ll))
 ```
 
-# 迭代器和生成器
+# 迭代器
 迭代：就是循环遍历的过程。迭代器只能往前，由iter() 和next() 组成  
-生成器：带有yield的函数为生成器  
+generator类型包括生成器和带yield的生成器函数  
+在Python里面，可迭代对象iterable和迭代器iterator有着特殊的含义  
+```text
+1.iterable是实现了__iter__()方法的对象，该方法会返回一个iterator对象
+2.iterator是实现了__iter__()和__next__()方法的对象，__iter__()方法返回的是iterator对象本身
+```
+由此可见，iterable和iterator的本质区别就是后者多了一个__next__()方法。也就是说一个iterator对象必定是一个iterable对象
+
+# 生成器  
+带有yield的函数为生成器  
 yield  
 
 # 函数
