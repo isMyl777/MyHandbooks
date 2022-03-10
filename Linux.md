@@ -3,6 +3,21 @@
 查看Linux命令帮助信息-关键词：help whatis info which whereis man 
 Linux文件目录管理-关键词：cd ls pwd mkdir rmdir tree touch ln rename stat file chmod chown locate find cp mv rm
 Linux文件内容查看命令-关键词：cat head tail more less sed vi vim grep
-
+```
+#linux目录结构
+```text
+/bin  bin是二进制文件的缩写，这个目录存放在最经常使用的命令
+/boot 存放启动linux时使用的核心文件，包括一些连接文件以及镜像文件
+/dev 存放linux的外部设备，在linux中访问设备的方式和访问文件的方式是相同的
+/etc 存放所有的系统管理所需要的配置文件和子目录
+/home  用户的主目录
+/lib 存放着系统最基本的动态连接共享库，作用DLL文件。几乎所有的应用程序都需要用到这些共享库
+/root 该目录为系统管理员，也称作超级权限者的用户主目录
+/sbin super user的意思，存放的是系统管理员使用的系统管理程序
+/usr/bin 系统用户使用的应用程序
+/tmp 存放临时文件
+/src  该目录存放一些服务启动之后需要提取的数据
+/usr/src 内核源代码默认的放置目录
+/var 存放日志文件
 
 ```
