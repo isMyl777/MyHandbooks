@@ -26,3 +26,8 @@ Linux文件内容查看命令-关键词：cat head tail more less sed vi vim gre
 mv oldname newname
 mv filename newpath
 ```
+# linux tree命令
+```text
+Linux tree命令用于以树状图列出目录的内容
+执行tree指令，它会列出指定目录下的所有文件，包括子目录里的文件
+```
