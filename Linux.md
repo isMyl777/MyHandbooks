@@ -21,3 +21,8 @@ Linux文件内容查看命令-关键词：cat head tail more less sed vi vim gre
 /var 存放日志文件
 
 ```
+# 移动文件和重命名
+```text
+mv oldname newname
+mv filename newpath
+```
