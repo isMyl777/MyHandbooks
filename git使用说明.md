@@ -48,3 +48,8 @@ ssh 39.108.250.186
 ```text
 windows机器上装了个putty来连ssh，winscp来copy文件到jetson
 ```
+
+#windows安装git bash
+```text
+https://git-scm.com/download/win
+```
