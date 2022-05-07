@@ -44,3 +44,7 @@ ssh 39.108.250.186
 四、实现server 2 登录 server 1 不需要输入密码
 操作步骤和server 1 登录 server 2 不需要输入密码一样
 ```
+# 解决远程连接ssh的问题方案
+```text
+windows机器上装了个putty来连ssh，winscp来copy文件到jetson
+```
