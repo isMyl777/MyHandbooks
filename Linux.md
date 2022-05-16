@@ -32,3 +32,14 @@ Linux tree命令用于以树状图列出目录的内容
 执行tree指令，它会列出指定目录下的所有文件，包括子目录里的文件
 ```
 ~~删除线~~
+#
+```text
+cat task_config.json |head -n 1024 > 1.json
+读取task config 1024行之前的内容生成新文件1.json
+cat tail.json >> 1.json
+tail.json 内容添加到1.json文件后面
+find . -name "*.onnx" | xargs -i cp {} ./tmp
+拷贝当前目录下所有onnx文件到上级文件夹tmp下面
+sed -i s/"app05"/"cdjyc"/g task_config.json
+
+```
