@@ -1,6 +1,6 @@
+# app.route
 ```python
-from flask import  Flask
-from flask import  request,redirect
+from flask import  Flask,redirect
 
 app = Flask(__name__)
 @app.route('/sb')
