@@ -1,4 +1,4 @@
-# app.route
+# 路由
 ```python
 from flask import  Flask,redirect
 
@@ -54,3 +54,24 @@ HEAD    ---简化版的get请求
 def new_page():
     return redirect("http://www.baidu.com")
 ```
+# 蓝图
+```text
+在flask中，使用蓝图来分模块组织管理
+蓝图可以理解为是一个存储一组视图方法的容器对象
+在一个应用初始化时，就应该要注册需要使用的Blueprint
+```
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
