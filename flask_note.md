@@ -60,8 +60,19 @@ def new_page():
 蓝图可以理解为是一个存储一组视图方法的容器对象
 在一个应用初始化时，就应该要注册需要使用的Blueprint
 ```
+```python
+# 蓝图创建
+user_bp = Blueprint('user',__name__)
 
-
+@user_bp.route('/profile')
+def get_profile():
+    return 'user_profile'
+# 注册蓝图
+app.register_blueprint(user_bp)
+from goods import  good_bp
+app.register_blueprint(good_bp)
+```
+# 视图
 
 
 
