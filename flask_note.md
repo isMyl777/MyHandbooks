@@ -31,3 +31,12 @@ app.run()
 命令行方式： flask routes
 代码内部方式： print(app.url_map)
 ```
+```python
+@app.route('/route_rule')
+def route_rule():
+    '''
+    route_rule 返回所有视图网址
+    '''
+    rules_iter = app.url_map.iter_rules()
+    return json.dumps({rule.endpoint: rule.rule for rule in rules_iter})
+```
