@@ -40,3 +40,15 @@ def route_rule():
     rules_iter = app.url_map.iter_rules()
     return json.dumps({rule.endpoint: rule.rule for rule in rules_iter})
 ```
+# flask 请求方式
+```text
+GET
+OPTIONS ---简化版的get请求，用于询问服务器接口信息
+HEAD    ---简化版的get请求
+只返回GET请求处理时的响应头，不返回响应体
+自定 POST PUT DELETE PATCH
+利用methods参数可以自己指定一个接口的请求方式
+@app.route('/baidu',methods = ['POST'])
+def new_page():
+    return redirect("http://www.baidu.com")
+```
