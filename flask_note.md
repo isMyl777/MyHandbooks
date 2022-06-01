@@ -27,7 +27,7 @@ def get_profile(user_id):
 app.run()
 ```
 # flask 查看所有路由的方式
-···text
+```text
 命令行方式： flask routes
 代码内部方式： print(app.url_map)
-···
+```
