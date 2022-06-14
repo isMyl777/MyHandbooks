@@ -1,6 +1,6 @@
 # 思维导图来学习 Javascript 基础知识  
 # 基本概念
-https://github.com/isMyl777/MyHandbooks/blob/main/%E6%80%9D%E7%BB%B4%E5%AF%BC%E5%9B%BE/JS%E5%9F%BA%E7%A1%80-%E5%9F%BA%E6%9C%AC%E6%A6%82%E5%BF%B5.png
+![image](https://github.com/isMyl777/MyHandbooks/blob/main/%E6%80%9D%E7%BB%B4%E5%AF%BC%E5%9B%BE/JS%E5%9F%BA%E7%A1%80-%E5%9F%BA%E6%9C%AC%E6%A6%82%E5%BF%B5.png)
 
 # 函数基础
 
