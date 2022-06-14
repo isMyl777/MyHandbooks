@@ -52,3 +52,5 @@ windows机器上装了个putty来连ssh，winscp来copy文件到jetson
 ```text
 https://git-scm.com/download/win
 ```
+# 参考文档
+https://wangchujiang.com/git-tips/
