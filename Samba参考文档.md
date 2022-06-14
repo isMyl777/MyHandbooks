@@ -1,19 +1,25 @@
-samba简介
+# samba简介
+```text
 samba，是一个基于GPL协议的自由软件。它重新实现了SMB/CIFS协议，可以在各个平台共享文件和打印机。
 
 1991年，还是大学生的Andrew Tridgwell，有三台机器，分别是Microsoft的DOS系统、DEC的Digital Unix系统、以及Sun的Unix系统。当时的技术无法让三者共享文件。为此，他开发了samba并将其开源。
 
-本来改名为smbserver，但是一家商业公司注册了SMBServer商标。他被告知不能使用。于是执行了grep -i '^s.*m.*b' /usr/share/dict/words，从中选择了samba这个词。我觉得这个是一个好想法，以后我也得着么干😄。
-
-安装
+本来改名为smbserver，但是一家商业公司注册了SMBServer商标。他被告知不能使用。于是执行了grep -i '^s.*m.*b' /usr/share/dict/words，从中选择了samba这个词
+```
+# 安装
+```
 yum -y install samba samba-client samba-common
-修改 samba 的配置文件
+```
+# 修改 samba 的配置文件
+```
 vim 在文件参数后面接 + 可以直接打开到文件末尾，相当于在命令行模式下按 G，然后直接按 o 可以在下一行插入下面内容。
 
 sudo vim /etc/samba/smb.conf +
 testparm # 测试smb.conf配置是否正确
 testparm –v # 命令可以详细的列出smb.conf支持的配置参数
-配置说明
+```
+# 配置说明
+```
 [myshare] 
 comment = My share 
 path = /home/public                     # 共享路径 
@@ -33,17 +39,24 @@ security = user #这里指定samba的安全等级。关于安全等级有四种�
   # user：由提供服务的samba服务器负责检查账户及密码（默认）
   # server：检查账户及密码的工作由另一台windows或samba服务器负责
   # domain：指定windows域控制服务器来验证用户的账户及密码。
+```
 
-
-重启服务
+# 重启服务
+```
 systemctl restart smb
 systemctl reload smb
 systemctl status smb
-查看安装状况
+```
+# 查看安装状况
+```
 rpm -qa|grep samba
-设置开机自启动
+```
+# 设置开机自启动
+```
 chkconfig --level 35 smb on             //在3、5级别上自动运行samba服务
-samba用户管理
+```
+# samba用户管理
+```
 pdbedit –a username：新建Samba账户。
 pdbedit –x username：删除Samba账户。
 pdbedit –L：列出Samba用户列表，读取passdb.tdb数据库文件。
@@ -59,16 +72,18 @@ smbpasswd -n 把用户的密码设置成空.
              要在global中写入 null passwords -true   
 smbpasswd -x  删除用户  
 netstat -anlp | grep samba
-
-关闭防火墙
+```
+# 关闭防火墙
+```
 systemctl stop firewalld        #关闭防火墙
 systemctl disable firewalld        #开机禁用防火墙
 如何让Finder不在远程连接时产生.DS_Store打开Mac的Terminal，输入
 
 defaults write com.apple.desktopservices DSDontWriteNetworkStores true
 然后重启Mac，再试试远程连接。
-
-错误解决
+```
+# 错误解决
+```
 增加samba用户提示Failed to add entry for user
 [root@ubuntu ~]# smbpasswd -a wcj
 New SMB password:
@@ -88,8 +103,8 @@ sudo smbpasswd -a wcj
 
 smbclient -L \\192.168.0.104 -U username
 smbclient //192.168.60.231/username #登录Samba服务器
-
-我的配置
+```
+# 我的配置
 [global]
     workgroup = MYGROUP
     server string = Samba Server Version %v
@@ -131,7 +146,7 @@ smbclient //192.168.60.231/username #登录Samba服务器
 session setup failed
 samba报错：session setup failed: NT_STATUS_LOGON_FAILURE 解决
 
-错误三
+# 错误三
 Failed to retrieve printer list: NT_STATUS_UNSUCCESSFUL解决
 
 printing = bsd
@@ -140,12 +155,12 @@ printcap name = /dev/null
 security不再支持share
 WARNING: Ignoring invalid value 'share' forparameter 'security'
 
-错误五
+# 错误五
 请检查服务器名称或 IP 地址，然后再试一次。如果问题持续发生，请联系系统管理员。
 
 解决办法：重启电脑
 
-错误六
+# 错误六
 # 解決方法：於smb.conf中加入以下設定 
 load printers = no 
 printing = bsd 
@@ -153,10 +168,10 @@ printcap name = /dev/null
 disable spoolss = yes 
 about:Unable to connect to CUPS server localhost:631 - Connection refused
 
-错误六
+# 错误六
 STATUS=daemon 'smbd' finished starting up and ready to serve connections
 
-参考
+# 参考
 samba官网
 Mac连接远程Linux管理文件（samba）
 简单的配置 samba 共享
