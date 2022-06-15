@@ -43,3 +43,9 @@ find . -name "*.onnx" | xargs -i cp {} ./tmp
 sed -i s/"app05"/"cdjyc"/g task_config.json
 
 ```
+# ubuntu防火墙
+```shell
+1、Alt+T打开终端，输入sudo ufw status回车，查看防火墙状态，inactive是关闭，active是开启。
+2、使用sudo ufw enable开启防火墙。
+3、使用sudo ufw disable关闭防火墙。
+```
