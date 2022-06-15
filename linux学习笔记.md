@@ -49,3 +49,6 @@ sed -i s/"app05"/"cdjyc"/g task_config.json
 2、使用sudo ufw enable开启防火墙。
 3、使用sudo ufw disable关闭防火墙。
 ```
+# ffmpeg 安装
+sudo apt install ffmpeg
+ffmpeg -rtsp_transport tcp -i rtsp://admin:gx123456@172.36.91.169:554/Streaming/Channels/101?transportmode=unicast -t 1200 -vcodec copy v1.avi
