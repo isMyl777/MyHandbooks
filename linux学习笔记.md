@@ -1,3 +1,6 @@
+# 学习网站
+<https://linux.ftqq.com/c/ps.html>
+
 # Linux命令
 ```text
 查看Linux命令帮助信息-关键词：help whatis info which whereis man 
