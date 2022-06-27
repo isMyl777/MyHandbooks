@@ -57,3 +57,27 @@ sed -i s/"app05"/"cdjyc"/g task_config.json
 sudo apt install ffmpeg  
 ffmpeg -rtsp_transport tcp -i rtsp://admin:gx123456@172.36.91.169:554/Streaming/Channels/101?transportmode=unicast -t 1200 -vcodec copy v1.avi
 ```
+# 打开终端
+```
+打开终端 ctrl+ alt + t
+ls 显示文件夹目录
+pwd 显示当前路径
+tree 树形展开目录 示例 tree Desktop
+清除终端内容 clear
+cd 目录 切换到指定目录
+cd ~ 切换到当前用户的主目录
+cd .. 切换到上一级目录
+cd . 切换到当前目录
+cd - 切换到上一次目录
+自动补全 按一次Tab是在自动补全，按2次是查看当前目录下有哪些子目录
+touch 文件名 创建指定文件
+mkdir 目录名 创建文件夹
+rm 文件名 删除指定文件或者目录
+rmdir 删除空目录
+cp 拷贝文件、拷贝目录
+mv 移动文件、移动目录、重命名
+查看命令帮助 
+--help 使用说明 命令 --help
+man 使用说明： man 命令
+
+```
