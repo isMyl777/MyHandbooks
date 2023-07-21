@@ -52,5 +52,12 @@ windows机器上装了个putty来连ssh，winscp来copy文件到jetson
 ```text
 https://git-scm.com/download/win
 ```
+# mac os 安装homebrew
+、、、
+国际版
+/bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
+国内源
+/bin/zsh -c "$(curl -fsSL https://gitee.com/cunkai/HomebrewCN/raw/master/Homebrew.sh)"
+、、、
 # 参考文档
 https://wangchujiang.com/git-tips/
