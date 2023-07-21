@@ -53,7 +53,7 @@ windows机器上装了个putty来连ssh，winscp来copy文件到jetson
 https://git-scm.com/download/win
 ```
 # mac os 安装homebrew
-、、、
+、、、text
 国际版  
 /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
 国内源  
