@@ -1,4 +1,4 @@
-virtualenv
+# virtualenv
 virtualenv可用于创建独立的 Python 环境，它会创建一个包含项目所必须要的执行文件。
 
 安装 virtualenv
